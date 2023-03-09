@@ -1,0 +1,28 @@
+{
+  "type": "project",
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "allow-plugins": {
+      "symfony/flex": true
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "doctrine/annotations": "^2.0",
+    "doctrine/common": "^3.4",
+    "doctrine/doctrine-bundle": "^2.8",
+    "doctrine/doctrine-migrations-bundle": "^3.2",
+    "doctrine/orm": "^2.9",
+    "jms/serializer": "^3.23",
+    "symfony/dotenv": "6.0.*",
+    "symfony/expression-language": "6.0.*",
+    "symfony/flex": "^2.0.1",
+    "symfony/framework-bundle": "6.0.*",
+    "symfony/property-access": "6.0.*",
+    "symfony/property-info": "6.0.*",
+    "symfony/serializer": "6.0.*",
+    "symfony/symfony": "^6.0",
+    "symfony/validator": "6.0.*"
+  }
+}
