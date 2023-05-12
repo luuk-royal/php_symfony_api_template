@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: symfony Back-end template
+  description: The symfony prototype template
+  version: 1.0.0
+servers:
+  - url: http://backend-prototype.localhost
+    description: local dev server.
+
+paths:
+  /login:
+    post:
+      operationId: loginUser
+      description: Returns access token
+      tags:
+        - authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: OK
+
+  /register:
+    post:
+      operationId: registerUser
+      description: Returns a confirmation that the user was made
+      tags:
+        - authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: OK
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: authentication
+  schemas:
+    User:
+      type: object
+      properties:
+        username:
+          type: string
+          example: 'Luuk'
+        password:
+          type: string
+          example: 'NOTSOSECURE'
